@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f3ef;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #4b2e1e; 
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#addOrderBtn {
+    background-color: #6b4e31; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+#addOrderBtn:hover {
+    background-color: #8b6f47;
+}
+
+#orderList {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+#orderList li {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+/* Estilo según el estado del pedido */
+#orderList li:not([class*="Completado"]) {
+    background-color: #fff3cd;
+}
+
+#orderList li[class*="Completado"] {
+    background-color: #d4edda; 
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #addOrderBtn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    #orderList li {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
